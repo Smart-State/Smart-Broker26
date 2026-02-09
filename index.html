@@ -58,13 +58,25 @@
             width: 100%;
             height: 100%;
         }
-        /* تنسيق خاص لكلمة القيمة الحقيقية */
-        .original-price {
+        .original-price-tag {
             font-family: 'Cairo', sans-serif;
-            font-weight: 300;
-            font-size: 0.9rem;
-            color: #6b7280;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: #ef4444;
             text-decoration: line-through;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .faq-item {
+            border-bottom: 1px solid #333;
+        }
+        .faq-question {
+            cursor: pointer;
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         @media (max-width: 640px) {
             .stat-card {
@@ -88,8 +100,14 @@
     <!-- Header / Navigation -->
     <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-black tracking-tighter">
+            <div class="text-2xl font-black tracking-tighter text-white">
                 <span class="text-[#D4AF37]">الوسيط</span> الذكي <span class="text-xs text-gray-400">2026</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-bold text-gray-400">
+                <a href="#why" class="hover:text-[#D4AF37] transition">لماذا الآن؟</a>
+                <a href="#features" class="hover:text-[#D4AF37] transition">المميزات</a>
+                <a href="#gifts" class="hover:text-[#D4AF37] transition">الهدايا</a>
+                <a href="#faq" class="hover:text-[#D4AF37] transition">الأسئلة الشائعة</a>
             </div>
             <a href="https://buy.stripe.com/fZufZg3870UY2Tt7Ac3ks01" class="gold-gradient px-6 py-2 rounded-full text-black font-bold text-sm hover:scale-105 transition">اشترك الآن</a>
         </div>
@@ -98,7 +116,7 @@
     <!-- Hero Section -->
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=2070" alt="Dubai Skyline" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=2070" alt="Dubai Skyline" class="w-full h-full object-cover opacity-60">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
         
@@ -111,7 +129,7 @@
                 حول صور هاتفك إلى عرض عقاري فاخر (Pitch Deck) في أقل من <span class="text-white font-bold">3 دقائق</span> باستخدام قوة الذكاء الاصطناعي.
             </p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="https://buy.stripe.com/fZufZg3870UY2Tt7Ac3ks01" class="gold-gradient text-black px-10 py-4 rounded-xl font-black text-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition">احجز مكانك - 499 درهم</a>
+                <a href="https://buy.stripe.com/fZufZg3870UY2Tt7Ac3ks01" class="gold-gradient text-black px-10 py-4 rounded-xl font-black text-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition">اشترك الآن - 499 درهم</a>
                 <a href="#video-section" class="bg-white/10 backdrop-blur px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition">شاهد تجربة النظام</a>
             </div>
         </div>
@@ -126,7 +144,7 @@
             </div>
             <div class="dark-card stat-card p-6 rounded-2xl text-center backdrop-blur-xl bg-black/60 border-[#D4AF37]/20 shadow-2xl">
                 <div class="stat-value text-3xl md:text-4xl font-black gold-text mb-1">3 دقائق</div>
-                <p class="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-bold">متوسط وقت التنفيذ</p>
+                <p class="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-bold">وقت التنفيذ</p>
             </div>
             <div class="dark-card stat-card p-6 rounded-2xl text-center backdrop-blur-xl bg-black/60 border-[#D4AF37]/20 shadow-2xl">
                 <div class="stat-value text-3xl md:text-4xl font-black gold-text mb-1">94%</div>
@@ -134,58 +152,73 @@
             </div>
             <div class="dark-card stat-card p-6 rounded-2xl text-center backdrop-blur-xl bg-black/60 border-[#D4AF37]/20 shadow-2xl">
                 <div class="stat-value text-3xl md:text-4xl font-black gold-text mb-1">X5</div>
-                <p class="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-bold">سرعة إغلاق الصفقات</p>
+                <p class="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-bold">سرعة الإغلاق</p>
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
-    <section class="py-24 px-6 bg-black">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-gray-400">لماذا يخسر الوسطاء التقليديون صفقاتهم في دبي؟</h2>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="p-8 dark-card rounded-2xl transition hover:border-[#D4AF37]/50">
-                    <div class="text-[#D4AF37] text-4xl mb-4">⌛</div>
-                    <h3 class="text-xl font-bold mb-3">ضياع الوقت</h3>
-                    <p class="text-gray-400">ساعات مهدرة في التنسيق والكتابة بدلاً من التواصل مع المستثمرين وكبار العملاء.</p>
+    <!-- لماذا يجب أن تبدأ الآن؟ -->
+    <section id="why" class="py-24 px-6 bg-black overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-black mb-4">لماذا يجب أن تبدأ <span class="gold-text">الآن؟</span></h2>
+                <div class="h-1 w-24 gold-gradient mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start gap-5">
+                        <div class="text-4xl text-[#D4AF37]">🚀</div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-white">سوق دبي لا ينتظر أحداً</h3>
+                            <p class="text-gray-400 leading-relaxed text-lg">في عام 2026، العميل يبحث عن المعلومة في ثوانٍ. إذا لم تقدم عرضك بشكل احترافي وفوري، فقدت العميل لصالح وسيط يستخدم التكنولوجيا.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="text-4xl text-[#D4AF37]">💎</div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-white">بناء براند "الوسيط النخبة"</h3>
+                            <p class="text-gray-400 leading-relaxed text-lg">الذكاء الاصطناعي يمنحك لمسة الفخامة التي تحتاجها لتتعامل مع مستثمرين دوليين يبحثون عن الجودة العالمية في العرض.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="text-4xl text-[#D4AF37]">💰</div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-white">توفير تكاليف المساعدين</h3>
+                            <p class="text-gray-400 leading-relaxed text-lg">بدلاً من توظيف مصمم أو كاتب محتوى، نظامك الذكي يقوم بكل العمل بكسر من التكلفة وبدقة أعلى.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="p-8 dark-card rounded-2xl transition hover:border-[#D4AF37]/50">
-                    <div class="text-[#D4AF37] text-4xl mb-4">📉</div>
-                    <h3 class="text-xl font-bold mb-3">ضعف المنافسة</h3>
-                    <p class="text-gray-400">ملفات PDF التقليدية لم تعد تبهر العميل الخليجي أو الدولي الذي يبحث عن الفخامة.</p>
-                </div>
-                <div class="p-8 dark-card rounded-2xl transition hover:border-[#D4AF37]/50">
-                    <div class="text-[#D4AF37] text-4xl mb-4">🏃‍♂️</div>
-                    <h3 class="text-xl font-bold mb-3">بطء الإغلاق</h3>
-                    <p class="text-gray-400">تأخرك في إرسال العرض يعني أن وسيطاً "ذكياً" قد استحوذ على العميل قبلك.</p>
+                <div class="relative">
+                    <div class="absolute -inset-4 gold-gradient opacity-20 blur-3xl rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1073" class="rounded-3xl relative z-10 border border-white/10 shadow-2xl" alt="Modern Office">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Curriculum Section -->
-    <section id="features" class="py-24 px-6">
+    <section id="features" class="py-24 px-6 bg-[#050505]">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="md:w-1/2">
                     <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">دورة <br><span class="text-[#D4AF37]">الوسيط الذكي 2026</span></h2>
                     <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 gold-gradient flex items-center justify-center rounded-lg text-black font-black flex-shrink-0">01</div>
+                        <div class="flex gap-4 p-4 dark-card rounded-xl hover:bg-white/5 transition group">
+                            <div class="w-12 h-12 gold-gradient flex items-center justify-center rounded-lg text-black font-black flex-shrink-0 group-hover:scale-110 transition">01</div>
                             <div>
                                 <h4 class="text-xl font-bold">هندسة النصوص (ChatGPT 4o)</h4>
                                 <p class="text-gray-400">صياغة أوصاف تبيع "الاستثمار ونمط الحياة" بلغة عربية خليجية وإنجليزية احترافية.</p>
                             </div>
                         </div>
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 gold-gradient flex items-center justify-center rounded-lg text-black font-black flex-shrink-0">02</div>
+                        <div class="flex gap-4 p-4 dark-card rounded-xl hover:bg-white/5 transition group">
+                            <div class="w-12 h-12 gold-gradient flex items-center justify-center rounded-lg text-black font-black flex-shrink-0 group-hover:scale-110 transition">02</div>
                             <div>
                                 <h4 class="text-xl font-bold">السحر البصري (Gamma Intelligence)</h4>
                                 <p class="text-gray-400">تحويل البيانات إلى عروض تفاعلية فخمة تفتح عبر الجوال فوراً دون تحميل ملفات.</p>
                             </div>
                         </div>
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 gold-gradient flex items-center justify-center rounded-lg text-black font-black flex-shrink-0">03</div>
+                        <div class="flex gap-4 p-4 dark-card rounded-xl hover:bg-white/5 transition group">
+                            <div class="w-12 h-12 gold-gradient flex items-center justify-center rounded-lg text-black font-black flex-shrink-0 group-hover:scale-110 transition">03</div>
                             <div>
                                 <h4 class="text-xl font-bold">تتبع سلوك العميل (Analytics)</h4>
                                 <p class="text-gray-400">اعرف متى فتح العميل العرض وأي شقة نالت إعجابه بالضبط قبل أن تتصل به.</p>
@@ -205,7 +238,6 @@
                             </iframe>
                         </div>
                     </div>
-                    <!-- النص التحفيزي تحت الفيديو -->
                     <div class="mt-6 text-center">
                         <p class="text-lg md:text-xl font-bold italic tracking-wide text-white">
                             بينما يصمم منافسك عرضاً، <span class="text-[#D4AF37]">أنت أغلقت الصفقة</span>
@@ -217,65 +249,135 @@
         </div>
     </section>
 
-    <!-- Before & After Section -->
-    <section class="py-24 px-6 bg-[#050505]">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl font-black mb-12 uppercase tracking-tighter">الفارق الجوهري</h2>
+    <!-- قسم الهدايا المحدث -->
+    <section id="gifts" class="py-24 px-6 bg-black relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-[#D4AF37] font-bold tracking-widest uppercase text-sm">مكافآت حصرية للمشتركين</span>
+                <h2 class="text-4xl md:text-5xl font-black mt-2">هدايا الانضمام <span class="text-[#D4AF37]">المباشرة</span></h2>
+            </div>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="p-6 bg-white/5 rounded-2xl border border-red-900/20 opacity-60">
-                    <span class="text-red-500 font-bold mb-4 block">الوسيط التقليدي</span>
-                    <div class="h-48 bg-gray-900 rounded mb-4 flex items-center justify-center text-gray-700 italic px-4">ملف PDF ممل وصعب الفتح يحتاج لبرامج خاصة</div>
-                    <ul class="text-right text-sm text-gray-500 space-y-2">
-                        <li>• نصوص عامة غير جذابة</li>
-                        <li>• تنسيق يدوي مرهق يأخذ ساعات</li>
-                        <li>• لا توجد تحليلات أو معرفة بتفاعل العميل</li>
-                    </ul>
+                <div class="p-8 dark-card rounded-3xl border-dashed border-[#D4AF37]/50 relative hover:border-[#D4AF37] transition duration-500 bg-gradient-to-br from-[#1a1a1a] to-black">
+                    <div class="text-5xl mb-6">📑</div>
+                    <h3 class="text-2xl font-bold mb-3">بنك الأوامر البرمجية 2026</h3>
+                    <p class="text-gray-400 text-base leading-relaxed">أكثر من 50 "برومبت" (Prompt) مصممة خصيصاً لسوق عقارات دبي، تغطي البيع على الخارطة، الإيجار، والاستثمار التجاري.</p>
+                    <div class="mt-6 text-[#D4AF37] font-bold text-sm bg-[#D4AF37]/10 inline-block px-3 py-1 rounded">القيمة التقديرية: 350 درهم</div>
                 </div>
-                <div class="p-6 bg-white/5 rounded-2xl border border-[#D4AF37]/40 shadow-xl shadow-[#D4AF37]/5">
-                    <span class="text-[#D4AF37] font-bold mb-4 block">الوسيط الذكي 2026</span>
-                    <div class="h-48 gold-gradient/10 rounded mb-4 flex items-center justify-center font-black gold-text px-4 text-center">عرض تفاعلي سحابي يفتح كرابط ويب فوراً</div>
-                    <ul class="text-right text-sm text-gray-300 space-y-2 font-bold">
-                        <li>• نصوص بيعية استهدافية بالذكاء الاصطناعي</li>
-                        <li>• تصميم عالمي فائق الفخامة في 3 دقائق</li>
-                        <li>• تتبع حي لتفاعل العميل (متى فتح؟ وماذا قرأ؟)</li>
-                    </ul>
+                <div class="p-8 dark-card rounded-3xl border-dashed border-[#D4AF37]/50 relative hover:border-[#D4AF37] transition duration-500 bg-gradient-to-br from-[#1a1a1a] to-black">
+                    <div class="text-5xl mb-6">💬</div>
+                    <h3 class="text-2xl font-bold mb-3">دعم تقني مباشر عبر WhatsApp</h3>
+                    <p class="text-gray-400 text-base leading-relaxed">خط ساخن مخصص للمشتركين للرد على أي تحديات تقنية تواجهك أثناء تطبيق النظام وضمان وصولك لأفضل النتائج.</p>
+                    <div class="mt-6 text-[#D4AF37] font-bold text-sm bg-[#D4AF37]/10 inline-block px-3 py-1 rounded">القيمة التقديرية: خدمة لا تقدر بثمن</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="join" class="py-24 px-6 bg-black">
+    <section id="join" class="py-24 px-6 bg-[#050505]">
         <div class="max-w-4xl mx-auto text-center">
-            <p class="original-price mb-4">القيمة الحقيقية: 2,500 درهم</p>
+            <span class="original-price-tag">القيمة الحقيقية: 2,500 درهم</span>
             
-            <div class="dark-card p-10 md:p-16 rounded-[3rem] border-2 border-[#D4AF37] relative overflow-hidden">
-                <div class="absolute top-0 right-0 gold-gradient px-10 py-2 text-black font-black -rotate-45 translate-x-12 translate-y-6 text-sm">أفضل قيمة</div>
-                <h3 class="text-2xl mb-4 font-bold">استثمار لمرة واحدة - وصول مدى الحياة</h3>
-                <div class="text-7xl md:text-9xl font-black mb-6 text-white tracking-tighter">499 <span class="text-2xl font-bold">درهم</span></div>
-                <p class="text-gray-400 mb-10 max-w-md mx-auto font-light">وصول فوري للدورة + بنك الأوامر البرمجية لعام 2026 + دعم فني عبر الواتساب.</p>
+            <div class="dark-card p-10 md:p-16 rounded-[3rem] border-2 border-[#D4AF37] relative overflow-hidden bg-gradient-to-b from-[#1a1a1a] to-black shadow-[0_0_50px_rgba(212,175,55,0.15)]">
+                <div class="absolute top-0 right-0 gold-gradient px-12 py-3 text-black font-black -rotate-45 translate-x-12 translate-y-6 text-sm shadow-xl uppercase tracking-widest">عرض محدود</div>
                 
-                <a href="https://buy.stripe.com/fZufZg3870UY2Tt7Ac3ks01" target="_blank" class="block w-full gold-gradient py-6 rounded-2xl text-black font-black text-2xl hover:scale-[1.02] transition shadow-lg shadow-[#D4AF37]/30">
-                    اشترك الآن - وصول فوري
+                <h3 class="text-2xl mb-4 font-bold text-gray-300">استثمار لمرة واحدة - وصول مدى الحياة</h3>
+                <div class="text-7xl md:text-9xl font-black mb-6 text-white tracking-tighter">499 <span class="text-2xl font-bold">درهم</span></div>
+                <p class="text-gray-400 mb-10 max-w-md mx-auto font-light leading-relaxed">انضم الآن واحصل على النظام الكامل مع كافة التحديثات المستقبلية لعام 2026.</p>
+                
+                <a href="https://buy.stripe.com/fZufZg3870UY2Tt7Ac3ks01" target="_blank" class="block w-full gold-gradient py-6 rounded-2xl text-black font-black text-2xl hover:scale-[1.02] transition shadow-lg shadow-[#D4AF37]/40">
+                    احجز مكانك الآن - وصول فوري
                 </a>
                 
                 <div class="mt-8 flex items-center justify-center gap-6 text-xs text-gray-500">
-                    <span class="flex items-center gap-1">🔒 دفع آمن (Stripe)</span>
+                    <span class="flex items-center gap-1">🔒 دفع آمن عبر Stripe</span>
                     <span class="flex items-center gap-1">✅ ضمان استعادة الأموال</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- الأسئلة الشائعة -->
+    <section id="faq" class="py-24 px-6 bg-black">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-black text-center mb-12">الأسئلة <span class="text-[#D4AF37]">الشائعة</span></h2>
+            <div class="space-y-2">
+                <div class="faq-item">
+                    <div class="faq-question text-lg font-bold">
+                        <span>هل أحتاج لخبرة سابقة في التصميم أو الذكاء الاصطناعي؟</span>
+                        <span class="text-[#D4AF37]">+</span>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-6 text-sm leading-relaxed">
+                        أبداً! الدورة مصممة لتبدأ معك من الصفر. النظام الذي سنشرحه يعتمد على واجهات بسيطة وسهلة الاستخدام، وسنقوم بتوفير "بنك الأوامر" الذي ستقوم بنسخه ولصقه فقط.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-lg font-bold">
+                        <span>هل الأدوات المستخدمة في الدورة مجانية؟</span>
+                        <span class="text-[#D4AF37]">+</span>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-6 text-sm leading-relaxed">
+                        نشرح في الدورة النسخ المجانية والمدفوعة. يمكنك البدء بالنسخ المجانية تماماً وتحقيق نتائج مذهلة قبل التفكير في أي اشتراك مدفوع.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-lg font-bold">
+                        <span>كيف سأحصل على الدورة بعد الدفع؟</span>
+                        <span class="text-[#D4AF37]">+</span>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-6 text-sm leading-relaxed">
+                        بمجرد إتمام عملية الدفع عبر Stripe، سيتم توجيهك تلقائياً لصفحة الدورة، وستصلك رسالة عبر البريد الإلكتروني والواتساب تحتوي على رابط الوصول مدى الحياة.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question text-lg font-bold">
+                        <span>هل يوجد دعم فني إذا واجهت مشكلة؟</span>
+                        <span class="text-[#D4AF37]">+</span>
+                    </div>
+                    <div class="faq-answer text-gray-400 pb-6 text-sm leading-relaxed">
+                        نعم بكل تأكيد، وهذا هو أهم ما يميزنا. نوفر خط دعم تقني مباشر عبر الواتساب للمشتركين لضمان تجاوز أي عقبة تقنية.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
-        <div class="mb-6 flex justify-center gap-8">
-            <a href="#" class="hover:text-white transition">الشروط والأحكام</a>
-            <a href="#" class="hover:text-white transition">سياسة الخصوصية</a>
-            <a href="https://wa.me/971505031970" class="hover:text-[#25d366] transition">الدعم الفني</a>
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm bg-[#050505]">
+        <div class="mb-6 flex justify-center gap-8 font-bold">
+            <a href="https://wa.me/971505031970" class="hover:text-white transition">الشروط والأحكام</a>
+            <a href="https://wa.me/971505031970" class="hover:text-white transition">سياسة الخصوصية</a>
+            <a href="https://wa.me/971505031970" class="hover:text-[#25d366] transition">الدعم الفني المباشر</a>
+        </div>
+        <div class="text-2xl font-black mb-4 tracking-tighter text-white">
+            <span class="text-[#D4AF37]">الوسيط</span> الذكي <span class="text-xs text-gray-500">2026</span>
         </div>
         <p>© 2026 نظام الوسيط الذكي - دبي. جميع الحقوق محفوظة.</p>
     </footer>
 
+    <script>
+        // نظام الأسئلة الشائعة
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const icon = item.querySelector('span:last-child');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.textContent = '+';
+                } else {
+                    // إغلاق أي سؤال مفتوح آخر (اختياري)
+                    document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+                    document.querySelectorAll('.faq-question span:last-child').forEach(ic => ic.textContent = '+');
+                    
+                    answer.style.display = 'block';
+                    icon.textContent = '-';
+                }
+            });
+        });
+        
+        // إخفاء الإجابات في البداية
+        document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+    </script>
 </body>
 </html>
