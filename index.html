@@ -3,276 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Broker 2026 | الوسيط الذكي</title>
+    <title>دورة الوسيط الذكي 2026 | نظام أتمتة العروض العقارية</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Cairo', 'Inter', sans-serif;
+            font-family: 'Cairo', sans-serif;
             scroll-behavior: smooth;
         }
         .gold-gradient {
             background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
         }
         .dark-card {
-            background: #121212;
-            border: 1px solid #2a2a2a;
+            background: #1a1a1a;
+            border: 1px solid #333;
         }
         .hero-overlay {
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.75);
         }
         .gold-text {
             background: linear-gradient(to right, #D4AF37, #f7e08a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        [dir="ltr"] { font-family: 'Inter', sans-serif; }
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #D4AF37, transparent);
-            margin: 4rem 0;
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 100;
+            background-color: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* تنسيق خاص لكلمة القيمة الحقيقية */
+        .original-price {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 300;
+            font-size: 0.9rem;
+            color: #6b7280;
+            text-decoration: line-through;
+        }
+        @media (max-width: 640px) {
+            .stat-card {
+                padding: 1rem !important;
+            }
+            .stat-value {
+                font-size: 1.5rem !important;
+            }
         }
     </style>
 </head>
 <body class="bg-black text-white selection:bg-[#D4AF37] selection:text-black">
 
-    <!-- Premium Navigation -->
-    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-xl border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <span class="text-xl md:text-2xl font-black gold-text tracking-tighter">SMART BROKER 2026</span>
+    <!-- زر الواتساب العائم -->
+    <a href="https://wa.me/971505031970" target="_blank" class="whatsapp-float">
+        <svg viewBox="0 0 24 24" width="35" height="35" fill="white">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.499-5.688-1.447l-6.305 1.65zm6.59-3.407c1.552.921 3.23 1.408 4.951 1.408h.006c5.441 0 9.869-4.427 9.871-9.867.001-2.636-1.028-5.115-2.898-6.986-1.87-1.871-4.35-2.9-6.984-2.901-5.441 0-9.868 4.429-9.871 9.869-.001 1.836.505 3.626 1.465 5.168l-.955 3.486 3.566-.936zm11.391-7.224c-.32-.16-1.891-.933-2.185-1.041-.295-.108-.51-.16-.724.16-.214.32-.828 1.041-1.014 1.255-.187.214-.373.24-.693.08-.32-.16-1.352-.498-2.577-1.59-.952-.849-1.594-1.898-1.781-2.218-.187-.32-.02-.493.141-.652.144-.144.32-.373.48-.56.16-.187.214-.32.32-.533.107-.213.054-.4-.027-.56-.081-.16-.724-1.745-.992-2.386-.261-.625-.526-.54-.724-.55-.187-.01-.401-.01-.614-.01s-.561.08-.854.4c-.294.32-1.121 1.094-1.121 2.668 0 1.574 1.148 3.095 1.308 3.308.16.214 2.259 3.449 5.474 4.838.765.33 1.362.528 1.828.675.769.244 1.467.21 2.02.127.617-.092 1.891-.773 2.157-1.48.267-.707.267-1.314.187-1.48-.08-.166-.294-.266-.614-.426z"></path>
+        </svg>
+    </a>
+
+    <!-- Header / Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter">
+                <span class="text-[#D4AF37]">الوسيط</span> الذكي <span class="text-xs text-gray-400">2026</span>
             </div>
-            <a href="#join" class="gold-gradient px-8 py-2.5 rounded-full text-black font-black text-sm hover:scale-105 transition shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-                ENROLL NOW | اشترك الآن
-            </a>
+            <a href="https://buy.stripe.com/fZufZg3870UY2Tt7Ac3ks01" class="gold-gradient px-6 py-2 rounded-full text-black font-bold text-sm hover:scale-105 transition">اشترك الآن</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20">
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?auto=format&fit=crop&q=80&w=2070" alt="Dubai Downtown" class="w-full h-full object-cover opacity-60">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=2070" alt="Dubai Skyline" class="w-full h-full object-cover">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
         
-        <div class="relative z-10 text-center px-6 max-w-5xl">
-            <div class="mb-10">
-                <span class="bg-white/5 backdrop-blur-md border border-white/20 text-[#D4AF37] px-8 py-2 rounded-full text-xs font-bold tracking-[0.2em] uppercase">
-                    The Elite Digital Real Estate Masterclass
-                </span>
-            </div>
-            
-            <h1 class="text-5xl md:text-[5.5rem] font-black mb-10 leading-[1.1] tracking-tighter">
-                Stop Designing Decks..<br>
-                <span class="gold-text italic">Start Closing Deals!</span>
-                <div class="text-3xl md:text-5xl mt-6 font-bold text-gray-300">توقف عن تصميم العروض.. وابدأ في إغلاق الصفقات!</div>
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <span class="inline-block border border-[#D4AF37] text-[#D4AF37] px-4 py-1 rounded-full text-sm mb-6 animate-pulse">نظام سيادي مخصص لسوق دبي والخليج</span>
+            <h1 class="text-4xl md:text-7xl font-black mb-6 leading-tight">
+                توقف عن تصميم العروض.. <br> <span class="gold-text italic">وابدأ في إغلاق الصفقات!</span>
             </h1>
-
-            <p class="text-xl md:text-2xl text-gray-400 mb-14 max-w-4xl mx-auto leading-relaxed font-light">
-                Why wait 48 hours for a design when AI can do it in 3 minutes? Transform your mobile photos into a luxury sales machine.
-                <br>
-                <span class="text-[#D4AF37] font-medium">لماذا تنتظر 48 ساعة للتصميم بينما يقوم الذكاء الاصطناعي بذلك في 3 دقائق؟ حول صور هاتفك إلى آلة بيع فاخرة.</span>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed font-light">
+                حول صور هاتفك إلى عرض عقاري فاخر (Pitch Deck) في أقل من <span class="text-white font-bold">3 دقائق</span> باستخدام قوة الذكاء الاصطناعي.
             </p>
-
-            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                <a href="#join" class="gold-gradient text-black px-16 py-6 rounded-2xl font-black text-2xl hover:shadow-[0_0_50px_rgba(212,175,55,0.4)] transition-all">
-                    GET ACCESS NOW | ابدأ رحلتك اليوم
-                </a>
-                <p class="text-gray-500 font-bold uppercase tracking-widest text-xs">Instant Digital Delivery</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="https://buy.stripe.com/fZufZg3870UY2Tt7Ac3ks01" class="gold-gradient text-black px-10 py-4 rounded-xl font-black text-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition">احجز مكانك - 499 درهم</a>
+                <a href="#video-section" class="bg-white/10 backdrop-blur px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition">شاهد تجربة النظام</a>
             </div>
         </div>
     </header>
 
-    <!-- The "Traditional Broker" Failure Section -->
-    <section class="py-32 px-6 bg-[#050505]">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-6xl font-black mb-6">Why Traditional Brokers Fail?</h2>
-                <h3 class="text-2xl md:text-3xl text-gray-500">لماذا يخسر الوسطاء التقليديون صفقاتهم؟</h3>
+    <!-- قسم الإحصائيات -->
+    <section class="relative z-20 -mt-12 md:-mt-16 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="dark-card stat-card p-6 rounded-2xl text-center backdrop-blur-xl bg-black/60 border-[#D4AF37]/20 shadow-2xl">
+                <div class="stat-value text-3xl md:text-4xl font-black gold-text mb-1">+1,250</div>
+                <p class="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-bold">وسيط عقاري مسجل</p>
             </div>
+            <div class="dark-card stat-card p-6 rounded-2xl text-center backdrop-blur-xl bg-black/60 border-[#D4AF37]/20 shadow-2xl">
+                <div class="stat-value text-3xl md:text-4xl font-black gold-text mb-1">3 دقائق</div>
+                <p class="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-bold">متوسط وقت التنفيذ</p>
+            </div>
+            <div class="dark-card stat-card p-6 rounded-2xl text-center backdrop-blur-xl bg-black/60 border-[#D4AF37]/20 shadow-2xl">
+                <div class="stat-value text-3xl md:text-4xl font-black gold-text mb-1">94%</div>
+                <p class="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-bold">رضا المستثمرين</p>
+            </div>
+            <div class="dark-card stat-card p-6 rounded-2xl text-center backdrop-blur-xl bg-black/60 border-[#D4AF37]/20 shadow-2xl">
+                <div class="stat-value text-3xl md:text-4xl font-black gold-text mb-1">X5</div>
+                <p class="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-bold">سرعة إغلاق الصفقات</p>
+            </div>
+        </div>
+    </section>
 
-            <div class="grid lg:grid-cols-2 gap-10">
-                <!-- Traditional Way -->
-                <div class="bg-zinc-950 p-10 rounded-[3rem] border border-red-900/20 relative group hover:border-red-900/40 transition">
-                    <div class="absolute -top-6 left-10 bg-red-600 px-6 py-2 rounded-full text-white font-black text-xs">THE OLD WAY - التقليدي</div>
-                    <ul class="space-y-8 mt-6">
-                        <li class="flex items-start gap-4">
-                            <span class="text-red-500 text-2xl">✕</span>
-                            <div>
-                                <h4 class="font-bold text-xl">Slow Response (24h+)</h4>
-                                <p class="text-gray-500 text-sm">Waiting for a designer or struggling with PowerPoint. <br> انتظار المصمم أو المعاناة مع باوربوينت.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <span class="text-red-500 text-2xl">✕</span>
-                            <div>
-                                <h4 class="font-bold text-xl">Boring PDFs</h4>
-                                <p class="text-gray-500 text-sm">Static files that look the same as 100 other brokers. <br> ملفات جامدة تشبه ما يرسله مئات الوسطاء الآخرين.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <span class="text-red-500 text-2xl">✕</span>
-                            <div>
-                                <h4 class="font-bold text-xl">Zero Analytics</h4>
-                                <p class="text-gray-500 text-sm">You have no idea if the client even opened the file. <br> ليس لديك أدنى فكرة عما إذا كان العميل قد فتح الملف.</p>
-                            </div>
-                        </li>
-                    </ul>
+    <!-- Problem Section -->
+    <section class="py-24 px-6 bg-black">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-gray-400">لماذا يخسر الوسطاء التقليديون صفقاتهم في دبي؟</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="p-8 dark-card rounded-2xl transition hover:border-[#D4AF37]/50">
+                    <div class="text-[#D4AF37] text-4xl mb-4">⌛</div>
+                    <h3 class="text-xl font-bold mb-3">ضياع الوقت</h3>
+                    <p class="text-gray-400">ساعات مهدرة في التنسيق والكتابة بدلاً من التواصل مع المستثمرين وكبار العملاء.</p>
                 </div>
-
-                <!-- AI Smart Broker Way -->
-                <div class="dark-card p-10 rounded-[3rem] border-2 border-[#D4AF37]/50 relative group hover:shadow-[0_0_40px_rgba(212,175,55,0.1)] transition">
-                    <div class="absolute -top-6 left-10 gold-gradient px-6 py-2 rounded-full text-black font-black text-xs">SMART BROKER WAY - الوسيط الذكي</div>
-                    <ul class="space-y-8 mt-6">
-                        <li class="flex items-start gap-4">
-                            <span class="text-[#D4AF37] text-2xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-xl">Instant Pitch (3 Mins)</h4>
-                                <p class="text-gray-400 text-sm">Send a professional deck while still at the viewing. <br> إرسال عرض احترافي بينما لا تزال في موعد المعاينة.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <span class="text-[#D4AF37] text-2xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-xl">Interactive Web Experience</h4>
-                                <p class="text-gray-400 text-sm">High-end links that look amazing on mobile. <br> روابط فاخرة تبدو مذهلة وسريعة على الموبايل.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <span class="text-[#D4AF37] text-2xl">✓</span>
-                            <div>
-                                <h4 class="font-bold text-xl">Live Heatmaps & Tracking</h4>
-                                <p class="text-gray-400 text-sm">Know exactly what the client liked before you call. <br> اعرف بالضبط ما أعجب العميل قبل أن تتصل به.</p>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="p-8 dark-card rounded-2xl transition hover:border-[#D4AF37]/50">
+                    <div class="text-[#D4AF37] text-4xl mb-4">📉</div>
+                    <h3 class="text-xl font-bold mb-3">ضعف المنافسة</h3>
+                    <p class="text-gray-400">ملفات PDF التقليدية لم تعد تبهر العميل الخليجي أو الدولي الذي يبحث عن الفخامة.</p>
+                </div>
+                <div class="p-8 dark-card rounded-2xl transition hover:border-[#D4AF37]/50">
+                    <div class="text-[#D4AF37] text-4xl mb-4">🏃‍♂️</div>
+                    <h3 class="text-xl font-bold mb-3">بطء الإغلاق</h3>
+                    <p class="text-gray-400">تأخرك في إرسال العرض يعني أن وسيطاً "ذكياً" قد استحوذ على العميل قبلك.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Masterclass Content (The Curriculum) -->
-    <section id="features" class="py-32 px-6">
+    <!-- Curriculum Section -->
+    <section id="features" class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row items-center gap-20">
-                <div class="lg:w-1/2 space-y-12">
-                    <h2 class="text-4xl md:text-6xl font-black leading-tight">
-                        A Complete Blueprint<br>
-                        <span class="gold-text">منهج متكامل لاحتراف البيع الرقمي</span>
-                    </h2>
-                    
-                    <div class="space-y-10">
-                        <div class="group">
-                            <h4 class="text-2xl font-bold mb-4 flex items-center gap-4">
-                                <span class="w-10 h-10 gold-gradient flex items-center justify-center rounded-lg text-black text-sm">01</span>
-                                The AI Copywriter
-                            </h4>
-                            <p class="text-gray-400 leading-relaxed border-l-2 border-[#D4AF37]/30 pl-6 pr-6 py-2">
-                                Mastering ChatGPT for Dubai Real Estate. Generate "Life-Style" scripts that trigger emotional buying.
-                                <br>
-                                <span class="text-gray-500 font-bold">احتراف ChatGPT لعقارات دبي: كتابة نصوص بيعية عاطفية تحفز على الشراء الفوري.</span>
-                            </p>
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl md:text-5xl font-black mb-8 leading-tight">دورة <br><span class="text-[#D4AF37]">الوسيط الذكي 2026</span></h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 gold-gradient flex items-center justify-center rounded-lg text-black font-black flex-shrink-0">01</div>
+                            <div>
+                                <h4 class="text-xl font-bold">هندسة النصوص (ChatGPT 4o)</h4>
+                                <p class="text-gray-400">صياغة أوصاف تبيع "الاستثمار ونمط الحياة" بلغة عربية خليجية وإنجليزية احترافية.</p>
+                            </div>
                         </div>
-
-                        <div class="group">
-                            <h4 class="text-2xl font-bold mb-4 flex items-center gap-4">
-                                <span class="w-10 h-10 gold-gradient flex items-center justify-center rounded-lg text-black text-sm">02</span>
-                                Automated Visual Design
-                            </h4>
-                            <p class="text-gray-400 leading-relaxed border-l-2 border-[#D4AF37]/30 pl-6 pr-6 py-2">
-                                Using Gamma & AI Design tools to build high-end presentations without a designer.
-                                <br>
-                                <span class="text-gray-500 font-bold">استخدام أدوات التصميم الذكي لبناء عروض تقديمية فاخرة دون الحاجة لمصمم.</span>
-                            </p>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 gold-gradient flex items-center justify-center rounded-lg text-black font-black flex-shrink-0">02</div>
+                            <div>
+                                <h4 class="text-xl font-bold">السحر البصري (Gamma Intelligence)</h4>
+                                <p class="text-gray-400">تحويل البيانات إلى عروض تفاعلية فخمة تفتح عبر الجوال فوراً دون تحميل ملفات.</p>
+                            </div>
                         </div>
-
-                        <div class="group">
-                            <h4 class="text-2xl font-bold mb-4 flex items-center gap-4">
-                                <span class="w-10 h-10 gold-gradient flex items-center justify-center rounded-lg text-black text-sm">03</span>
-                                High-Level Distribution
-                            </h4>
-                            <p class="text-gray-400 leading-relaxed border-l-2 border-[#D4AF37]/30 pl-6 pr-6 py-2">
-                                The psychological way to send links via WhatsApp and how to use data to close.
-                                <br>
-                                <span class="text-gray-500 font-bold">الطريقة النفسية لإرسال الروابط عبر واتساب وكيفية استخدام البيانات للإغلاق.</span>
-                            </p>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 gold-gradient flex items-center justify-center rounded-lg text-black font-black flex-shrink-0">03</div>
+                            <div>
+                                <h4 class="text-xl font-bold">تتبع سلوك العميل (Analytics)</h4>
+                                <p class="text-gray-400">اعرف متى فتح العميل العرض وأي شقة نالت إعجابه بالضبط قبل أن تتصل به.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div id="video-section" class="md:w-1/2 w-full">
+                    <div class="dark-card p-3 rounded-3xl border-[#D4AF37]/30 shadow-2xl shadow-[#D4AF37]/10 overflow-hidden">
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube.com/embed/yoUMWGKP8f8?rel=0" 
+                                title="عرض دورة الوسيط الذكي" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <!-- النص التحفيزي تحت الفيديو -->
+                    <div class="mt-6 text-center">
+                        <p class="text-lg md:text-xl font-bold italic tracking-wide text-white">
+                            بينما يصمم منافسك عرضاً، <span class="text-[#D4AF37]">أنت أغلقت الصفقة</span>
+                        </p>
+                        <div class="h-1 w-24 gold-gradient mx-auto mt-2 rounded-full opacity-50"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Video Showcase -->
-                <div class="lg:w-1/2 w-full">
-                    <div class="dark-card p-4 rounded-[3rem] border-2 border-white/5 shadow-2xl overflow-hidden group">
-                        <div class="aspect-video bg-zinc-950 rounded-[2.5rem] flex items-center justify-center relative overflow-hidden">
-                            <!-- VIDEO PLACEHOLDER -->
-                            <video 
-                                controls 
-                                class="absolute inset-0 w-full h-full object-cover opacity-80"
-                                poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200"
-                            >
-                                <source src="https://drive.google.com/file/d/17yqakSpy2rphvjWqAy5qz9nmpygjLHzF/view?usp=sharing" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                    <div class="mt-8 grid grid-cols-2 gap-4">
-                        <div class="bg-zinc-900/50 p-6 rounded-2xl border border-white/5 text-center">
-                            <div class="text-3xl font-black gold-text mb-1">45+</div>
-                            <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Minutes of Content</div>
-                        </div>
-                        <div class="bg-zinc-900/50 p-6 rounded-2xl border border-white/5 text-center">
-                            <div class="text-3xl font-black gold-text mb-1">50+</div>
-                            <div class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">Ready Prompts</div>
-                        </div>
-                    </div>
+    <!-- Before & After Section -->
+    <section class="py-24 px-6 bg-[#050505]">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-black mb-12 uppercase tracking-tighter">الفارق الجوهري</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-6 bg-white/5 rounded-2xl border border-red-900/20 opacity-60">
+                    <span class="text-red-500 font-bold mb-4 block">الوسيط التقليدي</span>
+                    <div class="h-48 bg-gray-900 rounded mb-4 flex items-center justify-center text-gray-700 italic px-4">ملف PDF ممل وصعب الفتح يحتاج لبرامج خاصة</div>
+                    <ul class="text-right text-sm text-gray-500 space-y-2">
+                        <li>• نصوص عامة غير جذابة</li>
+                        <li>• تنسيق يدوي مرهق يأخذ ساعات</li>
+                        <li>• لا توجد تحليلات أو معرفة بتفاعل العميل</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-white/5 rounded-2xl border border-[#D4AF37]/40 shadow-xl shadow-[#D4AF37]/5">
+                    <span class="text-[#D4AF37] font-bold mb-4 block">الوسيط الذكي 2026</span>
+                    <div class="h-48 gold-gradient/10 rounded mb-4 flex items-center justify-center font-black gold-text px-4 text-center">عرض تفاعلي سحابي يفتح كرابط ويب فوراً</div>
+                    <ul class="text-right text-sm text-gray-300 space-y-2 font-bold">
+                        <li>• نصوص بيعية استهدافية بالذكاء الاصطناعي</li>
+                        <li>• تصميم عالمي فائق الفخامة في 3 دقائق</li>
+                        <li>• تتبع حي لتفاعل العميل (متى فتح؟ وماذا قرأ؟)</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="join" class="py-32 px-6 bg-zinc-950">
+    <section id="join" class="py-24 px-6 bg-black">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl font-black mb-16 italic text-gray-700 line-through tracking-tighter">TOTAL VALUE: 2,500 AED</h2>
+            <p class="original-price mb-4">القيمة الحقيقية: 2,500 درهم</p>
             
-            <div class="dark-card p-14 md:p-24 rounded-[5rem] border-2 border-[#D4AF37] relative overflow-hidden shadow-[0_0_100px_rgba(212,175,55,0.15)]">
-                <div class="absolute top-0 right-0 gold-gradient px-14 py-4 text-black font-black text-sm uppercase -rotate-45 translate-x-14 translate-y-10">Limited 2026 Batch</div>
+            <div class="dark-card p-10 md:p-16 rounded-[3rem] border-2 border-[#D4AF37] relative overflow-hidden">
+                <div class="absolute top-0 right-0 gold-gradient px-10 py-2 text-black font-black -rotate-45 translate-x-12 translate-y-6 text-sm">أفضل قيمة</div>
+                <h3 class="text-2xl mb-4 font-bold">استثمار لمرة واحدة - وصول مدى الحياة</h3>
+                <div class="text-7xl md:text-9xl font-black mb-6 text-white tracking-tighter">499 <span class="text-2xl font-bold">درهم</span></div>
+                <p class="text-gray-400 mb-10 max-w-md mx-auto font-light">وصول فوري للدورة + بنك الأوامر البرمجية لعام 2026 + دعم فني عبر الواتساب.</p>
                 
-                <h3 class="text-3xl font-bold mb-8">One Payment. Lifetime Edge.</h3>
-                <div class="text-8xl md:text-[12rem] font-black mb-10 gold-text leading-none tracking-tighter">499 <span class="text-3xl text-white">AED</span></div>
-                
-                <div class="flex flex-col items-center gap-6 mb-16 text-gray-400 font-medium">
-                    <p class="flex items-center gap-3">✓ Full Masterclass Access | وصول كامل للدورة</p>
-                    <p class="flex items-center gap-3">✓ 50+ Real Estate AI Prompts | بنك الأوامر البرمجية</p>
-                    <p class="flex items-center gap-3">✓ Free 2026 System Updates | تحديثات مجانية لعام 2026</p>
-                </div>
-
-                <a href="https://buy.stripe.com/fZufZg3870UY2Tt7Ac3ks01" target="_blank" class="block w-full gold-gradient py-8 rounded-[2.5rem] text-black font-black text-3xl md:text-4xl hover:scale-[1.03] transition-all shadow-2xl shadow-gold/30">
-                    GET STARTED NOW
+                <a href="https://buy.stripe.com/fZufZg3870UY2Tt7Ac3ks01" target="_blank" class="block w-full gold-gradient py-6 rounded-2xl text-black font-black text-2xl hover:scale-[1.02] transition shadow-lg shadow-[#D4AF37]/30">
+                    اشترك الآن - وصول فوري
                 </a>
                 
-                <div class="mt-12 flex items-center justify-center gap-8 text-gray-600 text-[10px] font-bold uppercase tracking-[0.3em]">
-                    <span class="flex items-center gap-2">Stripe Secure</span>
-                    <span class="flex items-center gap-2">Instant Delivery</span>
+                <div class="mt-8 flex items-center justify-center gap-6 text-xs text-gray-500">
+                    <span class="flex items-center gap-1">🔒 دفع آمن (Stripe)</span>
+                    <span class="flex items-center gap-1">✅ ضمان استعادة الأموال</span>
                 </div>
             </div>
-            
-            <p class="mt-12 text-gray-500 text-sm max-w-2xl mx-auto">
-                Join 500+ brokers in Dubai who have already switched to AI. The market doesn't wait for slow brokers.
-                <br>
-                انضم إلى أكثر من 500 وسيط في دبي انتقلوا بالفعل إلى الذكاء الاصطناعي. السوق لا ينتظر البطء.
-            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-24 border-t border-white/5 text-center">
-        <div class="text-3xl font-black gold-text mb-6 tracking-tighter">SMART BROKER SYSTEM</div>
-        <div class="flex justify-center gap-8 mb-10 text-gray-500 text-xs font-bold uppercase tracking-widest">
-            <a href="#" class="hover:text-[#D4AF37]">Terms</a>
-            <a href="#" class="hover:text-[#D4AF37]">Privacy</a>
-            <a href="#" class="hover:text-[#D4AF37]">Support</a>
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
+        <div class="mb-6 flex justify-center gap-8">
+            <a href="#" class="hover:text-white transition">الشروط والأحكام</a>
+            <a href="#" class="hover:text-white transition">سياسة الخصوصية</a>
+            <a href="https://wa.me/971505031970" class="hover:text-[#25d366] transition">الدعم الفني</a>
         </div>
-        <p class="text-gray-700 text-[10px] uppercase tracking-[0.5em]">© 2026 Future Real Estate Academy - Dubai</p>
+        <p>© 2026 نظام الوسيط الذكي - دبي. جميع الحقوق محفوظة.</p>
     </footer>
 
 </body>
